@@ -1,1 +1,9 @@
-<h1>The index for groups</h1>
+<div>
+  <h1>The index for groups</h1>
+
+  <% @groups.each do |group| %>
+    <h3><%= group.name %></h3>
+  <% end %>
+
+  <%= link_to 'Add a new group', new_group_path %>
+</div>

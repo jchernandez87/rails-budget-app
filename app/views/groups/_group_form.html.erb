@@ -1,0 +1,13 @@
+<%= form_with model: group, url: groups_path, method: :post do |f| %>
+  <div>
+    <%= f.text_field :name, placeholder: 'enter group name' %>
+  </div>
+  
+  <div>
+    <%= f.text_field :icon, placeholder: 'enter icon url' %>
+  </div>
+
+  <div>
+    <%= f.submit 'Add group' %>
+  </div>
+<% end %>
