@@ -1,0 +1,13 @@
+<%= form_with model: expense, url: group_expenses_path, method: :post do |f| %>
+  <div>
+    <%= f.text_field :name, placeholder: 'Transaction name' %>
+  </div>
+
+  <div>
+    <%= f.number_field :amount, step: :any, placeholder: 'Insert a price' %>
+  </div>
+
+  <div>
+    <%= f.submit 'Add transaction' %>
+  </div>
+<% end %>

@@ -1,1 +1,8 @@
-<h1>Index for expenses</h1>
+<h1>Category for expenses</h1>
+
+<% @expenses.each do |expense| %>
+  <h1><%= expense.name %></h1>
+  <h1><%= expense.amount %></h1>
+<% end %>
+
+<%= link_to 'New transaction', new_group_expense_path(params[:group_id]) %>
