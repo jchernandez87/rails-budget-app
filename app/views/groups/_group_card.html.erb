@@ -1,9 +1,11 @@
 <articel>
-  <img></img>
+  <div>
+      <%= image_tag category.icon, size: "60x60", alt: "category icon" %>
+  </div>
   <div>
     <h5><%= category.name %></h5> 
   </div>
   <div>
-    <span>$50.00 (Total of all transactions for the current category)</span>
+    <span>Total: <%= Group.total(category.id) %></span>
   </div>
 </article>
