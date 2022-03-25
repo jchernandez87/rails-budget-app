@@ -8,6 +8,16 @@
   </div>
 
   <div>
+    <% groups.each do |group| %>
+    <div>
+      <%= f.label group.name %>
+     
+      <%= check_box_tag '[groups][]', group.id %>
+    </div>
+    <% end %>
+  </div>
+
+  <div>
     <%= f.submit 'Add transaction' %>
   </div>
 <% end %>
