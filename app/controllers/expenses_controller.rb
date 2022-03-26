@@ -24,6 +24,9 @@ class ExpensesController < ApplicationController
       end
       flash[:notice] = 'Transaction created successfully'
       redirect_to group_expenses_path(params[:group_id])
+    else
+      flash[:alert] = 'Transaction creation failed'
+      render 'new'
     end
   end
 
