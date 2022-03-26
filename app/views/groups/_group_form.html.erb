@@ -1,0 +1,21 @@
+<div class="hv-100 back-gray">
+  <%= form_with model: group, url: groups_path, method: :post do |f| %>
+    <div class="flex-center column w-100 h-40">
+      <div class="field w-100">
+        <%= f.text_field :name, placeholder: 'Category name', class: 'w-100' %>
+      </div>
+
+      <div class="form-line w-30 h-5 back-gray"></div>
+      
+      <div class="field w-100">
+        <%= f.text_field :icon, placeholder: 'Icon URL', class: 'w-100' %>
+      </div>
+
+      <div class="form-line w-30 h-5 back-gray"></div>
+      
+      <div class="actions w-90 m-small">
+        <%= f.submit 'Add Category', class: 'blue-btn'  %>
+      </div>
+    </div>
+  <% end %>
+</div>

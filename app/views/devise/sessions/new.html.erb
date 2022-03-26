@@ -1,0 +1,28 @@
+<div class="h-100 back-gray">
+
+<%= render "devise/shared/header", name: 'LOGIN', path: root_path %>
+
+<%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+  <div class="flex-center column w-100 h-40 m-small">
+    <div class="field w-100">
+      <%= f.email_field :email, autofocus: true, autocomplete: "email", placeholder: 'Email', class: 'w-100' %>
+    </div>
+
+    <div class="form-line w-30 h-5 back-gray"></div>
+    
+    <div class="field w-100">
+      <%= f.password_field :password, autocomplete: "current-password", placeholder: 'Password', class: 'w-100' %>
+    </div>
+    
+    <div class="actions w-90 m-small">
+      <%= f.submit "Log in", class: 'blue-btn' %>
+    </div>
+  </div>
+
+  <div class="w-100 flex-center m-small">
+    <span class="white-btn">Forgot your password?</span>
+  </div>
+<% end %>
+</div>
+
+

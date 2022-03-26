@@ -1,0 +1,19 @@
+<%= render "application/navbar", name: 'CATEGORIES', path: root_path %>
+<div class="back-gray hv-100 flex column aling-center space-between">
+  <div class="cards-container hv-100 overflow pb-small">
+    <% if @groups.empty? %>
+      <div class= "h-80 p-small flex aling-center">
+        <span class="proxima-bold text-center">Please add your first category</span>
+      </div>
+    <% else %>
+      <% @groups.each do |group| %>
+        <%= link_to group_expenses_path(group.id) do %>
+          <%= render 'group_card', category: group %>
+        <% end %>
+      <% end %>
+    <% end %>
+  </div>
+  <div class="h-15 back-green flex flex-center w-100">
+    <%= link_to 'ADD A NEW CATEGORY', new_group_path, class: 'add-btn w-90' %>
+  </div>
+</div>

@@ -1,0 +1,9 @@
+<% if user_signed_in? %>
+  <header class="flex row back-blue space-between header">
+  <%= link_to '<', path , class: 'back-btn' %> 
+  <span class="proxima-light mlt-small"><%= name %></span>
+  <div>
+    <%= button_to 'Logout', destroy_user_session_path, method: :delete, class: 'log-out-btn' %>
+  </div>
+</header>
+<% end %>

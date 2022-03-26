@@ -1,0 +1,35 @@
+<div class="hv-100 back-gray">
+  <%= form_with model: expense, url: group_expenses_path, method: :post do |f| %>
+    <div class="flex-center column w-100">
+      
+      <div class="field w-100">
+        <%= f.text_field :name, placeholder: 'Transaction name', class: 'w-100' %>
+      </div>
+
+      <div class="form-line w-30 h-5 back-gray"></div>
+      
+      <div class="field w-100">
+        <%= f.number_field :amount, step: :any, min: 0, placeholder: 'Insert a price', class: 'w-100' %>
+      </div>
+     
+      <div class="flex column aling-center">
+        <div class="p-small">
+          <span class="proxima-bold h-30">Additional Categories</span>
+        </div>
+        <div class="flex-wrap w-80 space-around">
+          <% groups.each do |group| %>
+              <span class="ml-xs">
+              <%= f.label group.name, class: 'check-font proxima-light' %>
+              <%= check_box_tag '[groups][]', group.id %>
+              </span>
+          <% end %>
+        </div>
+      </div>
+      
+      <div class="actions w-90 m-small">
+        <%= f.submit 'Add transaction', class: 'blue-btn' %>
+      </div>
+    
+    </div>
+  <% end %>
+</div>
