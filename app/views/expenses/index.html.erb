@@ -1,1 +1,25 @@
-<h1>Index for expenses</h1>
+<%= render "application/navbar", name: @name, path: groups_path %>
+
+<div class="flex column aling-center back-gray hv-100 w-100">
+  <div class="flex row w-90 space-between pt-small">
+    <h3 class="proxima-bold">Total</h3>
+    <span class="proxima-bold">$<%= @total %></span>
+  </div>
+  
+  <div class="w-100 flex column aling-center cards-container hv-100 overflow p-small">
+    <% if @expenses.empty? %>
+    <span class="proxima-bold p-small text-center">Currently you don't have any expense for this category</span>
+    <% else %>
+      <% @expenses.each do |expense| %>
+        <div class="flex row space-between back-white proxima-light light-gray p-small w-100">
+          <span><%= expense.name.capitalize %></span>
+          <span>$<%= expense.amount %></span>
+        </div>
+      <% end %>
+    <% end %>
+  </div>
+  
+  <div class="h-15 back-green flex flex-center w-100">
+    <%= link_to 'NEW EXPENSE', new_group_expense_path(params[:group_id]), class: 'add-btn w-90' %>
+  </div>
+</div>

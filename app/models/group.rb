@@ -4,4 +4,13 @@ class Group < ApplicationRecord
 
   validates :name, presence: true
   validates :icon, presence: true
+
+  def self.total(id)
+    expenses = Group.find(id).expenses
+    total = 0
+    expenses.each do |expense|
+      total += expense.amount
+    end
+    total
+  end
 end

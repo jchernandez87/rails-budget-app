@@ -1,0 +1,5 @@
+<%= render "application/navbar", name: 'NEW EXPENSE', path: group_expenses_path(params[:group_id]) %>
+
+<div>
+  <%= render 'expense_form', expense: @expense, groups: @groups %>
+</div>

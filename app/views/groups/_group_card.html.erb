@@ -1,0 +1,11 @@
+<article class="flex row align-center space-between wv-95 h-20 m-small back-white card-p">
+  <div class="flex row aling-center w-50">
+      <%= image_tag category.icon, size: "50x50", alt: "category icon" %>
+      <div class="flex ml-small">
+        <h5 class="proxima-light light-gray p-mid"><%= category.name.capitalize %></h5> 
+      </div>
+  </div>
+  <div class="flex column flex-center">
+    <span class="proxima-bold">$<%= Group.total(category.id) %></span>
+  </div>
+</article>

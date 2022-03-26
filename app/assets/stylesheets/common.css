@@ -1,0 +1,322 @@
+@font-face {
+  font-family: 'Proxima-bold';
+  src: url('FontsFree-Net-FontsFree-Net-Proxima-Nova-Bold.ttf');
+}
+
+@font-face {
+  font-family: 'Proxima-light';
+  src: url('FontsFree-Net-Proxima-Nova-Light.otf');
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  text-decoration: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+input {
+  padding: 15px 10px;
+  border: none;
+  font-family: 'Proxima-light', sans-serif;
+  font-size: 16px;
+}
+
+input:focus {
+  outline: none;
+  border: none;
+}
+
+/* messages */
+
+.alert {
+  background-color: rgb(223, 11, 11);
+  color: white;
+  text-align: center;
+  font-family: 'Proxima-light', sans-serif;
+}
+
+.notice {
+  background-color: #84d34b;
+  color: white;
+  text-align: center;
+  font-family: 'Proxima-light', sans-serif;
+}
+
+/* flex */
+.flex {
+  display: flex;
+}
+
+.flex-wrap {
+  flex-wrap: wrap;
+}
+
+.flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.column {
+  flex-direction: column;
+}
+
+.row {
+  flex-direction: row;
+}
+
+.justify-center {
+  justify-content: center;
+}
+
+.aling-center {
+  align-items: center;
+}
+
+.space-around {
+  justify-content: space-around;
+}
+
+.space-between {
+  justify-content: space-between;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.overflow {
+  overflow: auto;
+}
+
+/* colors */
+.green {
+  color: #5fb523;
+}
+
+.blue {
+  color: #3778c2;
+}
+
+.gray {
+  color: #434b54;
+}
+
+.light-gray {
+  color: #878a8f;
+}
+
+.back-blue {
+  background-color: #3778c2;
+}
+
+.back-gray {
+  background-color: #f5f6f8;
+}
+
+.back-white {
+  background-color: white;
+}
+
+.back-green {
+  background-color: #5fb523;
+}
+
+/* sizes && spacing */
+.w-100 {
+  width: 100%;
+}
+
+.wv-100 {
+  width: 100vw;
+}
+
+.wv-95 {
+  width: 95vw;
+}
+
+.w-90 {
+  width: 90%;
+}
+
+.w-80 {
+  width: 80%;
+}
+
+.w-60 {
+  width: 60%;
+}
+
+.w-50 {
+  width: 50%;
+}
+
+.h-100 {
+  height: 100vh;
+}
+
+.hv-100 {
+  height: calc(100vh - 47px);
+}
+
+.h-80 {
+  height: 80%;
+}
+
+.h-60 {
+  height: 60%;
+}
+
+.h-50 {
+  height: 50%;
+}
+
+.h-40 {
+  height: 40%;
+}
+
+.h-30 {
+  height: 30%;
+}
+
+.h-20 {
+  height: 20%;
+}
+
+.h-15 {
+  height: 15%;
+}
+
+.h-10 {
+  height: 10vh;
+}
+
+.h-5 {
+  height: 1.5px;
+}
+
+/* padding */
+
+.p-small {
+  padding: 15px;
+}
+
+.pt-small {
+  padding: 18px 10px 0 10px;
+}
+
+.card-p {
+  border: 1px solid rgba(119, 136, 153, 0.267);
+  border-radius: 5px;
+  padding: 5px 15px;
+}
+
+.pb-small {
+  padding-bottom: 15px;
+}
+
+/* margins */
+.m-small {
+  margin-top: 15px;
+}
+
+.mx-small {
+  margin: 15px 0;
+}
+
+.ml-small {
+  margin-left: 25px;
+}
+
+.ml-xs {
+  margin-left: 1px;
+}
+
+.mlt-small {
+  margin-left: 15px;
+}
+
+.border {
+  border: 1px solid red;
+}
+
+.header {
+  background-color: #316aad;
+  text-align: center;
+  color: white;
+  font-size: 14px;
+  font-family: 'Proxima-light', sans-serif;
+  padding: 15px 15px;
+}
+
+.big-pad {
+  padding: 25px 0;
+}
+
+/* fonts */
+.proxima-bold {
+  font-family: 'Proxima-bold', sans-serif;
+  color: #434b54;
+}
+
+.proxima-light {
+  font-family: 'Proxima-light', sans-serif;
+  font-size: 16px;
+  margin-top: 1px;
+  text-align: center;
+}
+
+.check-font {
+  font-size: 13px;
+}
+
+/* buttons */
+.blue-btn {
+  background-color: #3778c2;
+  text-align: center;
+  padding: 12px 0;
+  border-radius: 3px;
+  font-size: 14px;
+  width: 100%;
+  color: white;
+  font-family: 'Proxima-light', sans-serif;
+}
+
+.white-btn {
+  background-color: transparent;
+  text-align: center;
+  padding: 12px 0;
+  border-radius: 3px;
+  font-size: 14px;
+  width: 100%;
+  color: #989da3;
+  font-family: 'Proxima-light', sans-serif;
+}
+
+.add-btn {
+  border-radius: 5px;
+  border: 1px solid white;
+  color: white;
+  font-family: 'Proxima-light', sans-serif;
+  text-align: center;
+  padding: 15px 0;
+}
+
+.back-btn {
+  color: white;
+  font-weight: 600;
+  font-size: 16px;
+}
+
+.log-out-btn {
+  background-color: transparent;
+  border: none;
+  color: white;
+  font-size: 14px;
+}
