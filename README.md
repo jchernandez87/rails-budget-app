@@ -23,7 +23,7 @@
     <a href="https://github.com/jchernandez87/rails-budget-app"><strong>Explore the docs »</strong></a>
     <br />
     <br />
-    <a href="https://jchernandez87.github.io/rails-budget-app/">View Deploy</a>
+    <a href="https://expenser-rails-app.herokuapp.com/">View Deploy</a>
     ·
     <a href="https://github.com/jchernandez87/rails-budget-app/issues">Report Bug</a>
     ·
