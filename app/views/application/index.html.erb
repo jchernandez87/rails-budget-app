@@ -1,5 +1,11 @@
-<div>
-  <h1>My app name</h1>
-  <%= link_to 'Log in', new_user_session_path %>
-  <%= link_to 'Sing in', new_user_registration_path %>
+<div class="flex-center column h-100">
+  <div class="flex-center column space-between w-90 h-80">
+    <div class="flex flex-center w-100 h-60">
+      <h1 class="proxima-bold">Expenser</h1>
+    </div>
+    <div class="column flex w-100 h-40">
+      <%= link_to 'LOG IN', new_user_session_path, class: 'blue-btn' %>
+      <%= link_to 'SING UP', new_user_registration_path, class: 'white-btn' %>
+    </div>
+  </div>
 </div>

@@ -5,8 +5,6 @@ class GroupsController < ApplicationController
     @groups = Group.where(author_id: current_user.id)
   end
 
-  def show; end
-
   def new
     @group = Group.new
   end
